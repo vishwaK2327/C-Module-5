@@ -15,8 +15,31 @@ To write a C program that performs the division of two numbers using pointers.
 5. Print the result (quotient) stored in sub.
 
 ## Program
-Add code here
+```
+#include <stdio.h>
+int main() {
+    int a, b, sub;
+    int *c, *d;
+    printf("Enter two integers (dividend and divisor): ");
+    scanf("%d %d", &a, &b);
+    c = &a;
+    d = &b;
+    if (*d == 0) {
+        printf("Error: Division by zero is not allowed.\n");
+        return 1; // Exit with error
+    }
+    sub = *c / *d;
+    printf("Quotient = %d\n", sub);
+    return 0;
+}
+```
 
 ## Output
+```
+Enter two integers (dividend and divisor): 10 2
+Quotient = 5
+```
+
 
 ## Result
+The above programme is implemented and executed.
